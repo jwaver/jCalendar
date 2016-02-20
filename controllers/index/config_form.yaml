@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Index
+
+# Model Form Field configuration
+form: $/jwaver/calendar/models/index/fields.yaml
+
+# Model Class name
+modelClass: Jwaver\Calendar\Models\Index
+
+# Default redirect location
+defaultRedirect: jwaver/calendar/index
+
+# Create page
+create:
+    title: Create Index
+    redirect: jwaver/calendar/index/update/:id
+    redirectClose: jwaver/calendar/index
+
+# Update page
+update:
+    title: Edit Index
+    redirect: jwaver/calendar/index
+    redirectClose: jwaver/calendar/index
+
+# Preview page
+preview:
+    title: Preview Index

@@ -1,0 +1,50 @@
+<div class="layout">
+    <div class="layout-row">
+        <div class="layout-cell width-200 panel border-right" data-control="left-sidebar">
+            <form action="" id="trash">
+                <div class="icon-trash"></div>
+            </form>
+            <br>
+            <form id='external-events'>
+                <h4 class="title">Events</h4>
+                <ul id='sortable-events' class="draggable-events">
+                    <!--
+                    <li class='fc-event'>Breakfast</li>
+                    <li class='fc-event'>Lunch</li>
+                    <li class='fc-event'>Dinner</li>
+                    <li class='fc-event'>Meeting</li> 
+                    -->
+                    <li>
+                        <div class="loading-indicator">
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <form 
+                data-request="onAddEvent" 
+                data-request-update="result: '.draggable-events'"
+                data-request-success="$(this).find('input').val('')"
+                data-request-complete="reDrag();"
+            >
+                <div class="input-group">
+                    <input type="text" class="form-control" name="event">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">Add</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="layout-cell">
+            <div class="loading-indicator-container">
+                <div class="loading-indicator indicator-center">
+                    <span></span>
+                </div>
+            </div>
+            <div id="calendar" data-base="<?php print(URL::to('/')) ?>"></div>
+            
+            <div class="col-md-12"><p><label class="pull-right">Version <?php print($version); ?></label></p></div>
+            
+        </div>
+    </div>
+</div>

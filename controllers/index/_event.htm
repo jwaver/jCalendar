@@ -1,0 +1,48 @@
+
+<form>
+    <!-- Switcher -->
+    <div class="form-group switch-field">
+        <div class="field-switch">
+            <label>All DAY</label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" />
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+
+	<div class="col-md-12">
+		<div class="form-group"> 
+			<div class="input-group">
+				<span class="input-group-addon">ID</span>
+				<input type="text" name="" class="form-control" value="<?php echo $event['_id'] ?>" readonly>
+			</div>
+		</div>
+        <div class="form-group"> 
+			<div class="input-group">
+				<span class="input-group-addon">Title</span>
+				<input type="text" name="" class="form-control" value="<?php echo $event['title'] ?>">
+			</div>
+		</div>
+        <div class="row">
+            <div class="form-group col-md-6"> 
+                <div class="input-group">
+                    <span class="input-group-addon">Start</span>
+                    <input type="text" name="" class="form-control" value="">
+                </div>
+            </div>
+            <div class="form-group col-md-6"> 
+                <div class="input-group">
+                    <span class="input-group-addon">End</span>
+                    <input type="text" name="" class="form-control" value="">
+                </div>
+            </div>
+        </div>
+		<div class="form-group">
+			<textarea class="form-control" type="textarea" name="description" placeholder="Description" maxlength="300" rows="7"></textarea>
+		</div>
+	</div>
+
+	<br style="clear: both;">
+</form>
