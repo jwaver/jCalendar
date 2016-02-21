@@ -10,10 +10,10 @@ class Plugin extends PluginBase
 {
 
     public function __construct(){
-        
+        parent::__construct();
     }
 
-    public function pluginDetails()
+    public static function pluginDetails()
     {
         return [
             'name'          => 'calendar',

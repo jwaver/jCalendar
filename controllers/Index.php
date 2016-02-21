@@ -11,7 +11,7 @@ use Storage;
 use File;
 use Config;
 use Faker\Factory as Faker;
-use Jwaver\calendar\Plugin;
+use Jwaver\Calendar\Plugin;
 
 
 
@@ -40,7 +40,7 @@ class Index extends Controller
         $this->addJs($this->assetsPath.'/js/bootbox.min.js');
         $this->addJs($this->assetsPath.'/js/jquery-ui.js');
         $this->addJs($this->assetsPath.'/js/script.js');
-        
+        dd( Plugin::pluginDetails() );
         $this->vars['version'] = (new Plugin())->pluginDetails()['version'];
     }
 
