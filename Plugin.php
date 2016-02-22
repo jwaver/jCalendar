@@ -10,15 +10,15 @@ class Plugin extends PluginBase
 {
 
     public function __construct(){
-        parent::__construct();
+        // parent::__construct();
     }
 
-    public static function pluginDetails()
+    public function pluginDetails()
     {
         return [
             'name'          => 'calendar',
             'description'   => 'Change the way managing your Calendar.',
-            'version'       => 'v2.6',
+            'version'       => 'v2.7',
             'author'        => 'James Jomuad',
             'icon'          => 'icon-leaf',
             'url'           => 'www.jamesjomuad.com'

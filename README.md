@@ -4,14 +4,22 @@ A Calendar plugin for October CMS.
 JCalendar uses Fullcalendar plugin with an added feature that make it usefull.
   - Drag & Drop Events
 
+  
 ### Version
-2.6
+2.7
 
+
+### Added
+ - Add event notification (mailer not yet done)
+ - 
+ 
+ 
 ### Todos
  - Ability to Notify via Email
  - Easy Task Delete
  - Bug Fixes
 
+ 
 License
 ----
 MIT **Free Software, Hell Yeah!**

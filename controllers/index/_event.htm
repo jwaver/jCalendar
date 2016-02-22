@@ -1,48 +1,188 @@
 
-<form>
-    <!-- Switcher -->
-    <div class="form-group switch-field">
-        <div class="field-switch">
-            <label>All DAY</label>
-        </div>
-        <label class="custom-switch">
-            <input type="checkbox" />
-            <span><span>On</span><span>Off</span></span>
-            <a class="slide-button"></a>
-        </label>
-    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Details</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Notification</a></li>
+    </ul>
 
-	<div class="col-md-12">
-		<div class="form-group"> 
-			<div class="input-group">
-				<span class="input-group-addon">ID</span>
-				<input type="text" name="" class="form-control" value="<?php echo $event['_id'] ?>" readonly>
+    <!-- Tab panes -->
+    <form class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group switch-field">
+						<div class="field-switch">
+							<label>All DAY</label>
+						</div>
+						<label class="custom-switch">
+							<input type="checkbox" />
+							<span><span>On</span><span>Off</span></span>
+							<a class="slide-button"></a>
+						</label>
+					</div>
+				</div>
 			</div>
-		</div>
-        <div class="form-group"> 
-			<div class="input-group">
-				<span class="input-group-addon">Title</span>
-				<input type="text" name="" class="form-control" value="<?php echo $event['title'] ?>">
+			
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group"> 
+						<div class="input-group">
+							<span class="input-group-addon">ID</span>
+							<input type="text" name="" class="form-control" value="<?php echo $event['_id'] ?>" readonly>
+						</div>
+					</div>
+					<div class="form-group"> 
+						<div class="input-group">
+							<span class="input-group-addon">Title</span>
+							<input type="text" name="" class="form-control" value="<?php echo $event['title'] ?>">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6"> 
+							<div class="input-group">
+								<span class="input-group-addon">Start</span>
+								<input type="text" name="" class="form-control" value="">
+							</div>
+						</div>
+						<div class="form-group col-md-6"> 
+							<div class="input-group">
+								<span class="input-group-addon">End</span>
+								<input type="text" name="" class="form-control" value="">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" type="textarea" name="description" placeholder="Description" maxlength="300" rows="7"></textarea>
+					</div>
+				</div>
 			</div>
-		</div>
-        <div class="row">
-            <div class="form-group col-md-6"> 
-                <div class="input-group">
-                    <span class="input-group-addon">Start</span>
-                    <input type="text" name="" class="form-control" value="">
-                </div>
-            </div>
-            <div class="form-group col-md-6"> 
-                <div class="input-group">
-                    <span class="input-group-addon">End</span>
-                    <input type="text" name="" class="form-control" value="">
-                </div>
-            </div>
+			<br style="clear: both;">
         </div>
-		<div class="form-group">
-			<textarea class="form-control" type="textarea" name="description" placeholder="Description" maxlength="300" rows="7"></textarea>
-		</div>
-	</div>
-
-	<br style="clear: both;">
-</form>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group switch-field">
+						<div class="checkbox custom-checkbox">
+							<input type="checkbox" id="checkbox_Form-field-User-groups_1" name="User[groups][]" value="1">
+							<label for="checkbox_Form-field-User-groups_1">Notify Via Email</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Email Reminders</legend>
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<div class="input-group switch-field">
+							<span class="input-group-addon">To</span>
+							<input type="text" class="form-control mail_to required" name="mail_to" value="">
+						</div>
+						<br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="checkbox none">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								None
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="1_day_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								1 day prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="3_hrs_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								3 hours prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="2_hrs_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								2 hours prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="1_hr_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								1 hour prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="30_mins_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								30 mins prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="10_mins_prior">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								10 mins prior
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="on_assigned_time">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								On assigned Time
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="30_mins_after">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								30 mins after
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="1_hr_after">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								1 hour after
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="checkbox all">
+							<label style="font-size: 1em">
+								<input type="checkbox" name="email_periods[]" value="">
+								<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+								All
+							</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+        </div>
+    </form>

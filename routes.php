@@ -17,6 +17,7 @@ Route::group(['prefix' => 'api/jwaver/calendar/'], function () {
 });
 
 Route::get('jwaver/calendar/seed', function () {
+    // (new jwaver\Calendar\Updates\SeedEvents())->run();
     (new jwaver\Calendar\Updates\SeedEvents())->test();
 });
 

@@ -30,7 +30,7 @@ class Index extends Controller
 
     public function __construct(){
         parent::__construct();
-    
+
         BackendMenu::setContext('Jwaver.Calendar', 'calendar', 'index');
         
         $this->addCss($this->assetsPath.'/css/fullcalendar.css');
@@ -40,8 +40,8 @@ class Index extends Controller
         $this->addJs($this->assetsPath.'/js/bootbox.min.js');
         $this->addJs($this->assetsPath.'/js/jquery-ui.js');
         $this->addJs($this->assetsPath.'/js/script.js');
-        dd( Plugin::pluginDetails() );
-        $this->vars['version'] = (new Plugin())->pluginDetails()['version'];
+       
+        $this->vars['version'] = (new Plugin(null))->pluginDetails()['version'];
     }
 
     public function onAddEvent(){
