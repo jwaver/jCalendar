@@ -1,4 +1,4 @@
-<?php namespace Jwaver\Calendar;
+<?php namespace Jwaver\jCalendar;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -30,7 +30,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'Jwaver\Calendar\Components\MyComponent' => 'myComponent',
+            '\Jwaver\jCalendar\Components\MyComponent' => 'myComponent',
         ];
     }
 
@@ -49,7 +49,7 @@ class Plugin extends PluginBase
         return [
             'calendar' => [
                 'label'       => 'Calendar',
-                'url'         => Backend::url('jwaver/calendar/index'),
+                'url'         => Backend::url('jwaver/jCalendar/index'),
                 'icon'        => 'icon-calendar',
                 'permissions' => ['jwaver.calendar.*'],
                 'order'       => 6,

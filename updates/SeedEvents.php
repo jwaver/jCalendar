@@ -1,8 +1,8 @@
-<?php namespace jwaver\Calendar\Updates;
+<?php namespace \Jwaver\jCalendar\Updates;
 
 use Seeder;
 use Storage;
-use jwaver\Calendar\Models\Event;
+use /Jwaver/jCalendar/\Models\Event;
 use Faker\Factory as Faker;
 
 class SeedEvents extends Seeder

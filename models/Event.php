@@ -1,4 +1,4 @@
-<?php namespace Jwaver\Calendar\Models;
+<?php namespace Jwaver\jCalendar\Models;
 
 use Model;
 use Input;

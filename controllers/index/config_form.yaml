@@ -6,25 +6,25 @@
 name: Index
 
 # Model Form Field configuration
-form: $/jwaver/calendar/models/index/fields.yaml
+form: $/jwaver/jCalendar/models/index/fields.yaml
 
 # Model Class name
-modelClass: Jwaver\Calendar\Models\Index
+modelClass: /Jwaver/jCalendar/\Models\Index
 
 # Default redirect location
-defaultRedirect: jwaver/calendar/index
+defaultRedirect: /jwaver/jCalendar/index
 
 # Create page
 create:
     title: Create Index
-    redirect: jwaver/calendar/index/update/:id
-    redirectClose: jwaver/calendar/index
+    redirect: /jwaver/jCalendar/index/update/:id
+    redirectClose: /jwaver/jCalendar/index
 
 # Update page
 update:
     title: Edit Index
-    redirect: jwaver/calendar/index
-    redirectClose: jwaver/calendar/index
+    redirect: /jwaver/jCalendar/index
+    redirectClose: /jwaver/jCalendar/index
 
 # Preview page
 preview:

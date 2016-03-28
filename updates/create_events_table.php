@@ -1,4 +1,4 @@
-<?php namespace Jwave\Calendar\Updates;
+<?php namespace Jwave\jCalendar\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

@@ -1,5 +1,4 @@
-<?php namespace Jwaver\Calendar\Controllers;
-
+<?php namespace Jwaver\jCalendar\Controllers;
 use BackendMenu;
 use Backend\Classes\Controller;
 use BackendAuth;
@@ -11,7 +10,7 @@ use Storage;
 use File;
 use Config;
 use Faker\Factory as Faker;
-use Jwaver\Calendar\Plugin;
+use Jwaver\jCalendar\Plugin;
 
 
 
@@ -25,7 +24,7 @@ class Index extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
-    protected $assetsPath = '/plugins/Jwaver/Calendar/assets';
+    protected $assetsPath = '/plugins/jwaver/jCalendar/assets';
     protected $eventFile = "calendar.event.json";
 
     public function __construct(){

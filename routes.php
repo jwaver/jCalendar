@@ -1,6 +1,6 @@
 <?php
 
-use jwaver\Calendar\Models\Event;
+use jwaver\jCalendar\Models\Event;
 // use \BackendAuth;
 
 

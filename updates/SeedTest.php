@@ -1,4 +1,4 @@
-<?php namespace jwaver\Calendar\Updates;
+<?php namespace \Jwaver\jCalendar\Updates;
 
 use Seeder;
 use Storage;

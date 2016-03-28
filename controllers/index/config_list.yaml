@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/jwaver/calendar/models/event/columns.yaml
+list: $/jwaver/jcalendar/models/event/columns.yaml
 
 # Model Class name
-modelClass: Jwaver\Calendar\Models\Event
+modelClass: Jwaver\jCalendar\Models\Event
 
 # List Title
 title: Manage Indices
 
 # Link URL for each record
-recordUrl: jwaver/calendar/index/update/:id
+recordUrl: jwaver/jcalendar/index/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
