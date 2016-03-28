@@ -3,9 +3,9 @@
 use Backend;
 use System\Classes\PluginBase;
 
-/**
- * calendar Plugin Information File
- */
+//
+//  calendar Plugin Information File
+//
 class Plugin extends PluginBase
 {
 
@@ -57,4 +57,15 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerSchedule($schedule)
+    {
+        $schedule->call(function () {
+            $faker = Faker\Factory::create();
+            \Storage::put('registerSchedule',[
+                'md5'       => $faker->md5(),
+                'sha1'      => $faker->sha1(),
+                'sha256'    => $faker->sha256()
+            ]);
+        })->daily();
+    }
 }
