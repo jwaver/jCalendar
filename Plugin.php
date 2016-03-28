@@ -21,7 +21,7 @@ class Plugin extends PluginBase
             'version'       => 'v2.7',
             'author'        => 'James Jomuad',
             'icon'          => 'icon-leaf',
-            'url'           => 'www.jamesjomuad.com'
+            'url'           => 'https://github.com/jwaver/jCalendar'
         ];
     }
 
