@@ -2,7 +2,7 @@
 
 use Seeder;
 use Storage;
-use /Jwaver/jCalendar/\Models\Event;
+use \Jwaver\jCalendar\Models\Event;
 use Faker\Factory as Faker;
 
 class SeedEvents extends Seeder

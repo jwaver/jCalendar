@@ -16,7 +16,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'          => 'calendar',
+            'name'          => 'jCalendar',
             'description'   => 'Change the way managing your Calendar.',
             'version'       => 'v2.7',
             'author'        => 'James Jomuad',
