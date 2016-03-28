@@ -11,8 +11,8 @@ $(document).ready(function(){
     /*Init Calendar*/
     $('#calendar').fullCalendar({
         header: {
-            left: 'prev,next today',
-            center: 'prevYear title nextYear',
+            left: 'today',
+            center: 'prev,prevYear title nextYear,next',
             right: 'year,month,agendaWeek,agendaDay'
         },
         height:650,
@@ -22,11 +22,13 @@ $(document).ready(function(){
             alert('double click!');
         },
         dayClick: function(date, jsEvent, view) {
-            console.log('Day Click');
-            if(view.name == 'month' || view.name == 'basicWeek') {
-                $('#calendar').fullCalendar('changeView', 'agendaDay');
-                $('#calendar').fullCalendar('gotoDate', date);      
-            }
+            // if(view.name == 'month' || view.name == 'basicWeek') {
+                // $('#calendar').fullCalendar('changeView', 'agendaDay');
+                // $('#calendar').fullCalendar('gotoDate', date);      
+            // }
+			$(this).on("dblclick",function(){
+				console.log(this)
+			});  
         },
         droppable: true,
         drop: function(date,allDay){
@@ -125,7 +127,10 @@ $(document).ready(function(){
             }); */
         },
         eventRender:function (event, element){
-            element.click(function(e){ e.preventDefault(); })
+            // element.click(function(e){ e.preventDefault(); })
+			// element.on("dblclick",function(){
+				// console.log(event.start);
+			// });
         },
         forceEventDuration: true,
         loading: function(){
