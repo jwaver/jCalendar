@@ -1,9 +1,13 @@
 #calendar{width:100%;padding:30px;min-width: 650px;}
 #calendar .fc-toolbar *{display:inline-block}
+body.slim-container{padding-bottom: 0!important;}
 
+
+#layout-body{}
 #layout-body .layout{margin-top: -20px;}
 #layout-body aside{}
-#layout-body aside + section{background: #f0f0f0;}
+#layout-body aside + section{background: #f0f0f0; position: relative; height: 100%;}
+
 
 #external-events{}
 #external-events .loading-indicator span{position: inherit;} 
